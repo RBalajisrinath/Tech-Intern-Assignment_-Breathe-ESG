@@ -1,0 +1,17 @@
+Expense Type,Vendor,Trip Purpose,Departure Date,Return Date,Origin,Destination,Distance (km),Class,Hotel Nights,Amount,Currency,Employee ID,Employee Name
+FLIGHT,Air France,Client meeting Paris HQ,2026-01-15,2026-01-16,,,,BUSINESS,,1240.00,EUR,EMP001,Marie Dubois
+FLIGHT,Air France,Client meeting Paris HQ,2026-02-12,2026-02-13,,,,ECONOMY,,320.00,EUR,EMP002,Jean Martin
+FLIGHT,Delta,Annual conference,2026-03-05,2026-03-09,JFK,FRA,,ECONOMY,,1850.00,EUR,EMP003,Sarah Chen
+FLIGHT,Delta,Annual conference,2026-03-05,2026-03-09,SFO,LHR,,BUSINESS,,4200.00,EUR,EMP001,Marie Dubois
+HOTEL,Marriott,Client meeting Paris HQ,2026-01-15,2026-01-16,,,,,2,420.00,EUR,EMP001,Marie Dubois
+HOTEL,Marriott,Client meeting Paris HQ,2026-02-12,2026-02-13,,,,,1,210.00,EUR,EMP002,Jean Martin
+HOTEL,Hilton,Annual conference,2026-03-05,2026-03-09,,,,,4,1800.00,EUR,EMP003,Sarah Chen
+HOTEL,Sheraton,Annual conference,2026-03-05,2026-03-09,,,,,4,2400.00,EUR,EMP001,Marie Dubois
+CAR_RENTAL,Sixt,Client meeting Paris HQ,2026-01-15,2026-01-16,CDG,PAR,35,ECONOMY,,180.00,EUR,EMP001,Marie Dubois
+CAR_RENTAL,Avis,Local travel Frankfurt,2026-03-07,2026-03-08,FRA,FRA,50,ECONOMY,,150.00,EUR,EMP003,Sarah Chen
+MILEAGE,,Commute mileage claim,2026-02-28,,,,750,,,375.00,EUR,EMP004,Thomas Weber
+MILEAGE,,Sales visit mileage,2026-03-15,,,,420,,,210.00,EUR,EMP002,Jean Martin
+FLIGHT,Emirates,Supplier visit Dubai,2026-04-10,2026-04-12,,,,BUSINESS,,5600.00,EUR,EMP001,Marie Dubois
+HOTEL,Burj Al Arab,Supplier visit Dubai,2026-04-10,2026-04-12,,,,,2,3500.00,EUR,EMP001,Marie Dubois
+FLIGHT,Lufthansa,Training Munich,2026-04-20,2026-04-21,,,,ECONOMY,,450.00,EUR,EMP005,Anna Schmidt
+HOTEL,ibis,Training Munich,2026-04-20,2026-04-21,,,,,1,120.00,EUR,EMP005,Anna Schmidt
