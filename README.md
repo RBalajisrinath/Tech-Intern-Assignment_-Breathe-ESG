@@ -45,8 +45,3 @@ Seeds 46 records: 15 SAP, 15 Utility, 16 Travel. Run `python manage.py seed_data
 - `TRADEOFFS.md` — Three things deliberately not built
 - `SOURCES.md` — Source format research and sample data justification
 
-## Tech Stack
-
-- **Backend:** Django 6.0 + DRF 3.17 + SQLite (dev) / PostgreSQL (prod)
-- **Frontend:** Vite 8 + React 18 + Tailwind CSS
-- **Deployment:** Render (see `render.yaml`)
