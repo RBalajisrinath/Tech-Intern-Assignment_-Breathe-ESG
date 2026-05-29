@@ -16,23 +16,6 @@ services:
       - key: PYTHON_VERSION
         value: "3.12"
 
-  - type: web
-    name: breathe-esg-frontend
-    env: static
-    buildCommand: npm install && npm run build
-    staticPublishPath: dist
-    envVars:
-      - key: VITE_API_URL
-        value: https://breathe-esg-api.onrender.com/api
-    headers:
-      - path: /assets/*
-        name: Cache-Control
-        value: public, max-age=31536000, immutable
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
-
 databases:
   - name: breathe-esg-db
     databaseName: breathe_esg
