@@ -24,6 +24,10 @@ def seed_sample_data(source_type):
 
     org, _ = Organization.objects.get_or_create(name="Acme Corp", slug="acme-corp")
 
+    if SourceUpload.objects.filter(organization=org, source_type=source_type, filename=filename).exists():
+        print(f"  Already seeded {filename}, skipping")
+        return
+
     upload = SourceUpload.objects.create(
         organization=org,
         source_type=source_type,

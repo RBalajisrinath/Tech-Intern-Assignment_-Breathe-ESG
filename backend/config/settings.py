@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -52,39 +53,12 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 DATABASE_URL = os.environ.get("DATABASE_URL")
 if DATABASE_URL:
-    import re
-    m = re.match(r"postgres://(.+):(.+)@(.+):(\d+)/(.+)", DATABASE_URL)
-    if m:
-        DATABASES = {
-            "default": {
-                "ENGINE": "django.db.backends.postgresql",
-                "NAME": m.group(5),
-                "USER": m.group(1),
-                "PASSWORD": m.group(2),
-                "HOST": m.group(3),
-                "PORT": m.group(4),
-            }
-        }
-    else:
-        DATABASES = {
-            "default": {
-                "ENGINE": "django.db.backends.postgresql",
-                "NAME": os.environ.get("DB_NAME", "breathe_esg"),
-                "USER": os.environ.get("DB_USER", ""),
-                "PASSWORD": os.environ.get("DB_PASSWORD", ""),
-                "HOST": os.environ.get("DB_HOST", ""),
-                "PORT": os.environ.get("DB_PORT", "5432"),
-            }
-        }
+    DATABASES = {"default": dj_database_url.config(default=DATABASE_URL)}
 else:
     DATABASES = {
         "default": {
             "ENGINE": os.environ.get("DB_ENGINE", "django.db.backends.sqlite3"),
             "NAME": os.environ.get("DB_NAME", BASE_DIR / "db.sqlite3"),
-            "USER": os.environ.get("DB_USER", ""),
-            "PASSWORD": os.environ.get("DB_PASSWORD", ""),
-            "HOST": os.environ.get("DB_HOST", ""),
-            "PORT": os.environ.get("DB_PORT", ""),
         }
     }
 
